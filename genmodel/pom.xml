@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.emf.rubenbp</groupId>
+  <artifactId>genmodel</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>genmodel</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+     <dependency>
+    	<groupId>org.eclipse.emf</groupId>
+    	<artifactId>org.eclipse.emf.ecore</artifactId>
+    	<version>2.15.0</version>
+    </dependency>
+    <dependency>
+    <groupId>org.eclipse.emf</groupId>
+    <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+    <version>2.15.0</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.codegen -->
+<dependency>
+    <groupId>org.eclipse.emf</groupId>
+    <artifactId>org.eclipse.emf.codegen</artifactId>
+    <version>2.14.0</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.codegen.ecore -->
+<dependency>
+    <groupId>org.eclipse.emf</groupId>
+    <artifactId>org.eclipse.emf.codegen.ecore</artifactId>
+    <version>2.15.0</version>
+</dependency>
+   
+  </dependencies>
+  
+   <build>
+  <plugins>
+    <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>com.emf.rubenbp.genmodel.Main</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+</project>
